@@ -3,16 +3,16 @@ import React from 'react';
 export default class Registration extends React.Component {
     constructor(props) {
         super(props);
-        this.firstName = null;
-        this.lastName = null;
-        this.userName = null;
-        this.password = null;
-        this.age = null;
+        this.firstName = "";
+        this.lastName = "";
+        this.userName = "";
+        this.password = "";
+        this.age = "";
     }
 
     handleSubmit = () => {
 
-
+        console.log(this.firstName, this.lastName, this.userName, this.password, this.age);
     };
 
 
@@ -21,29 +21,37 @@ export default class Registration extends React.Component {
             <form>
                 <label>
                     FirstName:
-                    <input type="text" value={this.firstName} onChange={(e) => {
+                    <input type="text" onChange={(e) => {
                         this.firstName = e.target.value
                     }}/>
                 </label>
                 <br/>
                 <label>
                     LastName:
-                    <input type="text" ref={(input) => this.lastName}/>
+                    <input type="text" onChange={(e) => {
+                        this.lastName = e.target.value
+                    }}/>
                 </label>
                 <br/>
                 <label>
                     Username:
-                    <input type="text" ref={(input) => this.userName}/>
+                    <input type="text" onChange={(e) => {
+                        this.userName = e.target.value
+                    }}/>
                 </label>
                 <br/>
                 <label>
                     Password:
-                    <input type="password" ref={(input) => this.password}/>
+                    <input type="password" onChange={(e) => {
+                        this.password = e.target.value
+                    }}/>
                 </label>
                 <br/>
                 <label>
                     Age:
-                    <input type="text" ref={(input) => this.age}/>
+                    <input type="text" onChange={(e) => {
+                        this.age = e.target.value
+                    }}/>
                 </label>
                 <br/>
                 <input type="button" value="Submit" onClick={e => this.handleSubmit()}/>
