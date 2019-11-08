@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Registration extends React.Component {
+export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.firstName = "";
@@ -21,20 +21,6 @@ export default class Registration extends React.Component {
         return (
             <form>
                 <label>
-                    FirstName:
-                    <input type="text" onChange={(e) => {
-                        this.firstName = e.target.value
-                    }}/>
-                </label>
-                <br/>
-                <label>
-                    LastName:
-                    <input type="text" onChange={(e) => {
-                        this.lastName = e.target.value
-                    }}/>
-                </label>
-                <br/>
-                <label>
                     Username:
                     <input type="text" onChange={(e) => {
                         this.userName = e.target.value
@@ -45,13 +31,6 @@ export default class Registration extends React.Component {
                     Password:
                     <input type="password" onChange={(e) => {
                         this.password = e.target.value
-                    }}/>
-                </label>
-                <br/>
-                <label>
-                    Age:
-                    <input type="text" onChange={(e) => {
-                        this.age = e.target.value
                     }}/>
                 </label>
                 <br/>
